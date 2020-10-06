@@ -8,6 +8,6 @@ import re
 origin_seq = input('Paste the sequence: ')
 remove_char = [' ', '\t', '\n']
 for chr in remove_char:
-    origin_seq = origin_seq.replace(chr, '').upper() # remove space. Tabs need checking
-final_seq = re.sub('\d', '', origin_seq) # remove digits
+    origin_seq = origin_seq.replace(chr, '') # remove space
+final_seq = re.sub('\d', '', origin_seq).upper() # remove digits
 print(final_seq)
