@@ -37,13 +37,53 @@ for number in odd_numbers:
     print(number, end=' ')
     
 # 4.13 Buffet
-    
 def menu_change(menu, old_items, new_items):
     '''Define menu changing method'''
     menu_list = list(menu)
-    for items in old_items:
-        menu_list[menu_list.index(old_val)] = new_val
+    for k, v in enumerate(old_items):
+        menu_list[menu_list.index(v)] = new_items[k]
     return tuple(menu_list)
+
 menu = ('Salad', 'Chicken fry', 'Beef rib', 'Ice cream', 'Pizza', 'Egg soup')
-new_menu = menu_change(menu, 'Beef rib', 'Lamb rib')
-print(new_menu)
+print('The menu:')
+counter = 1
+for item in menu:
+    print(f'Item {counter}: {item}')
+    counter += 1
+
+# Change 2nd and 4th items
+old_formula = ['Chicken fry', 'Ice cream']
+new_formula = ['Japanes ramen', 'Grape juice']
+new_menu = menu_change(menu, old_formula, new_formula)
+
+print('The new menu:')
+counting = 1
+for item in new_menu:
+    print(f'Item {counting}: {item}')
+    counting += 1
+
+# 8.3 T-Shirt
+def make_shirt(size, text):
+    '''Making a T-shirt'''
+    print(f'T-shirt size {size} with slogan {text.upper()}')
+
+make_shirt('L', 'heal the world!')
+
+# 8.4 Large Shirts
+def make_shirt(size='L', text='I love Python!'):
+    '''Making a T-shirt'''
+    print(f'T-shirt size {size} with slogan {text.upper()}')
+
+make_shirt()
+make_shirt('M')
+make_shirt('S', 'I love you more!')
+
+# 8.5 Cities
+def describe_city(city_name, country='Canada'):
+    print(f'{city_name} city is in {country}')
+
+describe_city('Toronto')
+describe_city('Montreal')
+describe_city('Chicago', 'USA')
+
+# 8.6 City Name
