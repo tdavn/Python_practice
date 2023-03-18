@@ -1,0 +1,22 @@
+def prime_num(num):
+    u = 2
+    while u < num:
+        if num % u == 0:
+            return False
+        else:
+            u += 1
+    return True
+
+number = int(input("Enter a number:"))
+prime_factors = []
+
+while number != 1:
+    i = 2
+    while i <= number:
+        if number % i == 0 and prime_num(i):
+            prime_factors.append(i)
+            number = number / i
+            break
+        else:
+            i += 1
+print(prime_factors)
