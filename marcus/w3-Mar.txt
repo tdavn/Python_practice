@@ -1,0 +1,9 @@
+Write a Python function to find prime factors.
+It should be input an integer value. The output is a list contain all
+prime factors.
+E.g.
+get_prime_factors(630)
+
+ouput: [2, 3, 3, 5, 7]
+
+because: 630 = 2x3x3x5x7
