@@ -2,10 +2,12 @@ def identify():
     string = (input("Enter any thing:"))
     string.lower()
     string.strip()
+    string = list(string)
+    string.remove(" ")
+    "".join(string)
     reverse_string = string [::-1]
     if reverse_string == string:
         return True
     else:
         return False
 print(identify())
-
